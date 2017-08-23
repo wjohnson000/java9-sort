@@ -1,4 +1,4 @@
-package sort.java9;
+package sort.java9.examples;
 
 import java.awt.Taskbar;
 import java.awt.Taskbar.Feature;

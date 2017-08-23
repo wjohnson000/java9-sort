@@ -1,4 +1,4 @@
-package sort.java9;
+package sort.java9.examples;
 
 import java.io.IOException;
 import java.util.stream.Stream;
@@ -9,7 +9,7 @@ import java.util.stream.Stream;
  * @author wjohnson000
  *
  */
-public class Ex02_ListLiveProcesses {
+public class Ex03_ListLiveProcesses {
     public static void main(String... args) throws IOException, InterruptedException {
         ProcessHandle handle = ProcessHandle.current();
         System.out.println("Handle: " + handle);
