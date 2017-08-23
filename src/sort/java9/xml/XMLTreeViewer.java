@@ -31,13 +31,6 @@ public class XMLTreeViewer {
     private JTextField txtFile;
     private DefaultMutableTreeNode currentNode;
 
-    void expandAll(JTree tree) {
-        int row = 0;
-        while (row < tree.getRowCount()) {
-            tree.expandRow(row++);
-        }
-    }
-
     void startDocument() {
         currentNode = new DefaultMutableTreeNode("XML Viewer");
         ((DefaultTreeModel) xmlJTree.getModel()).setRoot(currentNode);
@@ -68,6 +61,13 @@ public class XMLTreeViewer {
         }
         currentNode = (DefaultMutableTreeNode) currentNode.getParent();
     }
+    
+    void expandAll(JTree tree) {
+        int row = 0;
+        while (row < tree.getRowCount()) {
+            tree.expandRow(row++);
+        }
+    }
 
     void xmlSetUp(File xmlFile) {
         XMLInputFactory factory = XMLInputFactory.newDefaultFactory();
@@ -77,7 +77,6 @@ public class XMLTreeViewer {
             XMLStreamReader reader = factory.createXMLStreamReader(fis);
             while(reader.hasNext()) {
                 int event = reader.next();
-                System.out.println("EVENT: " + event);
                 switch(event) {
                 case XMLStreamConstants.START_DOCUMENT:
                     startDocument();
@@ -132,10 +131,9 @@ public class XMLTreeViewer {
                 fileopen.addChoosableFileFilter(filter);
 
                 int ret = fileopen.showDialog(null, "Open file");
-
                 if (ret == JFileChooser.APPROVE_OPTION) {
                     File file = fileopen.getSelectedFile();
-                    txtFile.setText(file.getPath() + File.separator + file.getName());
+                    txtFile.setText(file.getAbsolutePath());
                     xmlSetUp(file);
                 }
             }
@@ -159,9 +157,10 @@ public class XMLTreeViewer {
     }
 
     public static void main(String[] args) {
+        File xmlFile = new File("C:/Users/wjohnson000/git/std-ws-place/pom.xml");
+
         XMLTreeViewer treeViewer = new XMLTreeViewer();
         treeViewer.createUI();
-        File xmlFile = new File("C:/Users/wjohnson000/git/std-ws-place/pom.xml");
         treeViewer.txtFile.setText(xmlFile.getAbsolutePath());
         treeViewer.xmlSetUp(xmlFile);
     }
