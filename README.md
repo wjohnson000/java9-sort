@@ -40,6 +40,7 @@ To run "mvn" from the command line, copy to following file as "toolchains.xml" i
 your maven repository (.m2 directory), wherever the "settings.xml" file resides.
 Please note that the "jdkHome" should point to the appropriate paths on your machine.
 
+```xml
 <toolchains>
   <!-- JDK toolchains -->
   <toolchain>
@@ -63,3 +64,4 @@ Please note that the "jdkHome" should point to the appropriate paths on your mac
     </configuration>
   </toolchain>
 </toolchains>
+```
