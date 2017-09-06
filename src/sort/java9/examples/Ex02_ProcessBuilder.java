@@ -6,7 +6,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 /**
- * Start a system process, dump the results.
+ * Start a system process, dump the results.  There are three different ways of listing the
+ * contents of the "C:\temp" directory.  NOTE: the third way would work in Java 1.7 and 1.8.
  * 
  * @author wjohnson000
  *

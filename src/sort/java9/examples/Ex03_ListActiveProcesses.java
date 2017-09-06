@@ -4,12 +4,13 @@ import java.io.IOException;
 import java.util.stream.Stream;
 
 /**
- * Start a system process, dump the results.
+ * List all currently running [active] processes, including their PID, command line and
+ * start and run times.
  * 
  * @author wjohnson000
  *
  */
-public class Ex03_ListLiveProcesses {
+public class Ex03_ListActiveProcesses {
     public static void main(String... args) throws IOException, InterruptedException {
         ProcessHandle handle = ProcessHandle.current();
         System.out.println("Handle: " + handle);

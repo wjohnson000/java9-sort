@@ -8,12 +8,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Start a system process, dump the results.
+ * Two ways of walking the current stack trace:
+ * <ul>
+ *   <li><strong>OLD - </strong>Create a new {@link Throwable} and pull the stack trace</li>
+ *   <li><strong>NEW - </strong>Retrieve a {@link StackWalker} and walk the stack</li>
+ * </ul>
  * 
  * @author wjohnson000
  *
  */
-public class Ex04_StackWalker {
+public class Ex06_StackWalker {
     public static void main(String... args) throws IOException, InterruptedException {
 //      System.out.println("Len('ABCDEF'): " + countCharsUgly("ABCDEF"));
         System.out.println("Len('ABCDEF'): " + countChars("ABCDEF"));
