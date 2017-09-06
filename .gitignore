@@ -1,4 +1,6 @@
 /bin
+/mod
+/lib
 .project
 .classpath
 
