@@ -1,4 +1,4 @@
-module java.nine.sort {
+module java9.sort {
     requires java.desktop;
     requires java.sql;
     requires java.xml;
