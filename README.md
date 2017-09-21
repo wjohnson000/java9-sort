@@ -2,28 +2,24 @@
 Sample Java9 source code and resources
 
 Some useful links ...
+---------------------
+The Internet is flush with information about Java9, including a lot of sample code.  As you peruse
+these pages please remember one crucial item: many of them were built based on early releases of
+Java 9.  The information is largely reliable, but changes have been made to to the JDK even in the
+past few months.  That said, here are some good starting pages: 
 
-  - http://openjdk.java.net/projects/jdk9/
-  - https://docs.oracle.com/javase/9/whatsnew/toc.htm
-
-  - http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html
-  - http://download.java.net/java/jdk9/docs/api/overview-summary.html
-  - http://openjdk.java.net/projects/jigsaw/spec/sotms/
-  - http://openjdk.java.net/projects/jigsaw/quick-start
-  - http://openjdk.java.net/projects/jigsaw/spec/sotms
-  - http://openjdk.java.net/jeps/261
-
-  - https://www.sitepoint.com/ultimate-guide-to-java-9/
-  - https://labs.consol.de/development/2017/02/13/getting-started-with-java9-modules.html
-
-
-Other Links:
-  - https://www.slideshare.net/BhanuPrakashGopulara/jdk9-modules-and-java-linker
-  - https://github.com/CodeFX-org/demo-java-9
-
-Concerns about 'Jigsaw':
-  - https://mreinhold.org/blog/to-the-jcp-ec
-  - https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns?_sscc=t
+  - Oracle JDK 9 Documentation -- Start here!
+    * http://docs.oracle.com/javase/9/index.html
+  - List of all new features (JCPs)
+    * http://openjdk.java.net/projects/jdk9/
+  - JDK Module Summary -- list of modules and associated packages
+    * http://cr.openjdk.java.net/~mr/jigsaw/ea/module-summary.html
+  - JDK API Specification -- module summary
+    * http://docs.oracle.com/javase/9/docs/api/overview-summary.html
+  - JDK Module System -- deeper dive (18 months old, but still valuable)
+    * http://openjdk.java.net/projects/jigsaw/spec/sotms/
+  - And to be fair, concerns about Jigsaw implementation
+    * https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
 
 
 'jmod' tool

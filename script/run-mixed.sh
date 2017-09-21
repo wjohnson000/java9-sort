@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# =================================================================================================
+# NOTE: This worked on an early (pre-release) version of Java9, but does not in the final release!!
+# =================================================================================================
 JAVA_HOME_9="C:/Program Files/Java/jdk-9"
 JAVA_OPTS="-Xms32m -Xmx64m -Xss12m"
 
