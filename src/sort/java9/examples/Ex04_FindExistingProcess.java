@@ -7,6 +7,9 @@ import java.util.stream.Stream;
 /**
  * Find a running process of Windows "notepad" and attach a "CompletableFuture" which
  * will simply print out a message when the process is killed.
+ * <p/>
+ * Run this w/out having started "notepad".  Then start "notepad" and run this again, and
+ * then close "notepad" before this application completes (six seconds!)
  * 
  * @author wjohnson000
  *

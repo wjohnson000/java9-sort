@@ -2,9 +2,7 @@ package sort.java9.examples;
 
 import java.io.IOException;
 import java.lang.StackWalker.Option;
-import java.lang.StackWalker.StackFrame;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -20,7 +18,7 @@ import java.util.stream.Collectors;
 public class Ex06_StackWalker {
     public static void main(String... args) throws IOException, InterruptedException {
 //      System.out.println("Len('ABCDEF'): " + countCharsUgly("ABCDEF"));
-        System.out.println("Len('ABCDEF'): " + countChars("ABCDEF"));
+        System.out.println("Len('A-F'): " + countCharsStackWalker("ABCDEF"));
     }
 
     static int countCharsUgly(String someString) {
@@ -37,19 +35,18 @@ public class Ex06_StackWalker {
         }
     }
 
-    static int countChars(String someString) {
+    static int countCharsStackWalker(String someString) {
         System.out.println("=========================================================");
         StackWalker walker = StackWalker.getInstance(Option.RETAIN_CLASS_REFERENCE);
         System.out.println("Caller: " + walker.getCallerClass());
-        List<StackFrame> stack = walker.walk(s -> s.limit(10).collect(Collectors.toList()));
-        stack.forEach(System.out::println);
+        walker.walk(s -> s.limit(10).collect(Collectors.toList())).forEach(System.out::println);
 
         if (someString == null) {
             return 0;
         } else if (someString.isEmpty()) {
             return 0;
         } else {
-            return 1 + countChars(someString.substring(1));
+            return 1 + countCharsStackWalker(someString.substring(1));
         }
     }
 }
