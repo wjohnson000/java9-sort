@@ -8,8 +8,9 @@
 ../src/sort/java9/examples/Ex07_InterfaceMethods.java
 ../src/sort/java9/examples/Ex08_InterfaceMethods.java
 ../src/sort/java9/examples/Ex09_InterfaceMethods.java
-../src/sort/java9/examples/Ex11_Taskbar.java
+../src/sort/java9/examples/Ex10_UTF8PropertiesFail.java
+../src/sort/java9/examples/Ex11_UTF8PropertiesFixed.java
+../src/sort/java9/examples/Ex12_Taskbar.java
 ../src/sort/java9/examples/Ex99_DumpSystemProperties.java
 ../src/sort/java9/http/Http2GET.java
-../src/sort/java9/itext/CreatePDF.java
 ../src/sort/java9/xml/XMLTreeViewer.java

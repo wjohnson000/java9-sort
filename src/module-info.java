@@ -3,5 +3,5 @@ module java.nine.sort {
     requires java.sql;
     requires java.xml;
     requires jdk.incubator.httpclient;
-//    requires itextpdf;
+    requires itextpdf;
 }
