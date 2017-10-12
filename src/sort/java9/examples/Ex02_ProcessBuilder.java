@@ -14,9 +14,9 @@ import java.util.concurrent.ExecutionException;
  */
 public class Ex02_ProcessBuilder {
     public static void main(String... args) throws Exception {
-//        listTemp_version01();
+        listTemp_version01();
 //        listTemp_version02();
-        listTemp_version03();
+//        listTemp_version03();
     }
 
     static void listTemp_version01() throws IOException, InterruptedException, ExecutionException {
@@ -66,3 +66,15 @@ public class Ex02_ProcessBuilder {
         listDirProc.inheritIO().start();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
